@@ -1,0 +1,96 @@
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --light-gray: rgba(153, 153, 153, 0.383);
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 326px;
+    overflow: hidden;
+    text-align: center;
+
+    &-header{
+        width: 100%;
+        display: block;
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid var(--light-gray);
+
+        &-img{
+            background-color: white;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: 5px solid white ;
+            // menos 48 (la mitad de su tamano) y menos 5 por el borde
+            margin-top: calc(-100px - 5px);
+        }
+
+        &-title{
+            text-transform: capitalize;
+            margin-top: 2rem;
+            font-size: 1.8rem;
+
+            span{
+                color: var(--dark-gray);
+                font-weight: 400;
+            }
+        }
+
+        &-text{
+            color: var(--dark-gray);
+            font-weight: 400;
+            font-size: 1.6rem;
+            margin-top: 0px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-footer{
+        display: flex;
+        justify-content: space-around;
+
+        &-social{
+            margin: 2rem 0px;
+            
+            p {
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
